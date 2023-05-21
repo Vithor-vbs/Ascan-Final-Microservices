@@ -1,0 +1,19 @@
+.App{
+    background-color: #111111;
+}
+
+.row{
+    display: flex;
+    justify-content:  center;
+}
+
+.col-4 h2{
+    text-align: center;
+}
+
+.headers{
+    margin-bottom: 3rem !important;
+}
+.container{
+    max-width: 100% !important;
+}
