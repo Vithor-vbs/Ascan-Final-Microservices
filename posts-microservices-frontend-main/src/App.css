@@ -1,19 +1,81 @@
 .App{
-    background-color: #111111;
+    background-color: #212332;
+    height: 100vh;
+}
+.darkest-color{
+    background-color: #212230;
 }
 
 .row{
     display: flex;
     justify-content:  center;
 }
+.card-header h4{
+    color: #c7c3c3;
+}
 
 .col-4 h2{
     text-align: center;
+    margin-top: 5rem;
+    font-family: Arial, Helvetica, sans-serif
 }
 
-.headers{
+.headers-box{
     margin-bottom: 3rem !important;
 }
+.header{
+    color: #ffff;
+    margin-bottom: 3rem;
+}
+
 .container{
     max-width: 100% !important;
 }
+
+.dark-color{
+    border: none;
+    background-color: #2d3042;
+    color: #c7c3c3;
+}
+.btn-secundary{
+    border-color: #ebad3b;
+    background-color: #ebad3b;
+    color: #fff;
+}
+.btn-delete{
+    border-color: #f33939;
+    background-color: #f33939;
+    color: #fff;
+}
+.btn{
+    width: 10rem;
+}
+.assign-button{
+    background-color: #04aa6d !important;
+    border-color: #04aa6d !important;
+    color: #fff;
+}
+.button-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+.dark-color:focus {
+    background-color: #2d3042; 
+    color: #fff; 
+  }
+.cancelled-description {
+    color: #ebad3b !important;
+  }
+.purchased-description {
+    color: #04aa6d !important; /* Change to the desired color for 'Purchased' */
+  }
+
+  .card-footer{
+    color: #c7c3c3;
+  }
+  .card-title{
+    color: #c7c3c3;
+  }
+
+  /* #f33939 */
+  /* #ebad3b */
