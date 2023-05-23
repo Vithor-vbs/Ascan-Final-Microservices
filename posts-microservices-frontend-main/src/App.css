@@ -41,14 +41,16 @@
     border-color: #ebad3b;
     background-color: #ebad3b;
     color: #fff;
+    margin: 0 1rem;
 }
 .btn-delete{
     border-color: #f33939;
     background-color: #f33939;
     color: #fff;
+    white-space: nowrap;
 }
 .btn{
-    width: 10rem;
+    width: 100%;
 }
 .assign-button{
     background-color: #04aa6d !important;
