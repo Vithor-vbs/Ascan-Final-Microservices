@@ -9,7 +9,9 @@ import requests
 class PostAPIView(APIView):
     def get(self, request):
         posts = Post.objects.all()
-        return Response([self.formatPost(p) for p in posts])
+        # return Response([self.formatPost(p) for p in posts])
+        serializer = PostSerializer(posts, many=True)
+        return Response(serializer.data)
     
     def formatPost(self, post):
         comment = requests.get("http://127.0.0.1:8001/api/posts/%d/comments" %post.id).json()

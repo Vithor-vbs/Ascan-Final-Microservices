@@ -18,3 +18,8 @@ class CommentsAPIView(APIView):
         serializer.save()
         return Response(serializer.data)
         
+class CommentDeleteView(APIView):
+    def delete(self, request, post_id):
+        comments = Comment.objects.filter(post_id=post_id)
+        comments.delete()
+        return Response(status=204)
