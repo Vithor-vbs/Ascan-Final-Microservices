@@ -19,6 +19,8 @@ services:
     command: 'python -u consumer.py'
     depends_on:
       - db
+    environment:
+      - DJANGO_SETTINGS_MODULE=app.settings
 
   db:
     image: mysql:8.0.20

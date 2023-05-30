@@ -5,6 +5,7 @@ django.setup()
 
 from core.models import Comment
 
+
 params = pika.URLParameters('amqps://vddjqqjj:jcCZzfXmZA0FbJLBsw6GoxQIZIc3txd2@sparrow.rmq.cloudamqp.com/vddjqqjj')
 
 connection = pika.BlockingConnection(params)
@@ -18,20 +19,20 @@ def callback(ch, method, properties, body):
     data = json.loads(body)
     print(data) 
 
-    if properties.content_type == 'comment_created':
-        comment = Comment(id=data['id'], text=data['text'], post_id=data['post_id'])
-        comment.save()
+    if properties.content_type == 'post_created':
+        # post = Comment(text=data['text'], post_id=data['post_id'])
+        # comment.save()
         print('Comment Created')
 
-    elif properties.content_type == 'comment_updated':
-        comment = Comment.objects.get(id=data['id'])
-        comment.text = data['text']
-        comment.save()
+    elif properties.content_type == 'post_updated':
+        # comment = Comment.objects.get(post_id=data['post_id'])
+        # comment.text = data['text']
+        # comment.save()
         print('Comment Updated')
 
-    elif properties.content_type == 'comment_deleted':
-        comment = Comment.objects.get(id=data['id'])
-        comment.delete()
+    elif properties.content_type == 'post_deleted':
+        # comment = Comment.objects.get(post_id=data['post_id'])
+        # comment.delete()
         print('Comment Deleted')
 
 

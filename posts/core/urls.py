@@ -5,4 +5,3 @@ urlpatterns = [
     path('posts', PostAPIView.as_view()),
     path('posts/<int:pk>', PostAPIView.as_view()),
 ]
-

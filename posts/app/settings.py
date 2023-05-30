@@ -85,6 +85,14 @@ DATABASES = {
         'PASSWORD': 'root',
         'HOST': 'db',
         'PORT':'3306',
+    },
+    'comments_db': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'subscriptions',
+        'USER': 'root',
+        'PASSWORD': 'root', 
+        'HOST': 'db',
+        'PORT':'3306',
     }
 }
 
