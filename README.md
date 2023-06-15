@@ -6,6 +6,8 @@ The idea is to have a subscription manager that can update users subscription st
 
 My solution:
 
+![image](https://github.com/Vithor-vbs/Ascan-Final-Microservices/assets/69211568/32c4862b-4725-42a9-b32e-df1ef3a00296)
+
 ### `Prerequisites / Technologies Used`
 
 - Made with Python and Django framework 
