@@ -21,12 +21,12 @@ def callback(ch, method, properties, body):
     if properties.content_type == 'post_created':
         comment = Comment(text=data['text'], post_id=data['post_id'])
         comment.save(using='comments_db')
-        print('Comment Created')
+        
 
     elif properties.content_type == 'post_deleted':
         comment = Comment.objects.get(post_id=data['post_id'])
         comment.delete(using='comments_db')
-        print('Comment Deleted')
+        
 
 channel.basic_consume(queue='admin', on_message_callback=callback, auto_ack=True)
 

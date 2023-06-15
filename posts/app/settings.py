@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'users',
         'USER': 'root',
         'PASSWORD': 'root',
@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'subscriptions',
         'USER': 'root',
-        'PASSWORD': 'root', 
+        'PASSWORD': 'root',
         'HOST': 'db',
         'PORT':'3306',
     }
@@ -138,4 +138,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Cross-Origin Resource Sharing is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin
 CORS_ALLOW_ALL_ORIGINS = True

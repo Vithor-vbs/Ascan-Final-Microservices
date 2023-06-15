@@ -9,4 +9,4 @@ class Comment(models.Model):
     text = models.TextField(max_length=1000)
 
     class Meta:
-        app_label = 'comments'  # Set the app_label to match the comments service app
+        app_label = 'comments'  # match the comments service app

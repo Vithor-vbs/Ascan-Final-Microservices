@@ -20,20 +20,16 @@ def callback(ch, method, properties, body):
     print(data) 
 
     if properties.content_type == 'post_created':
-        # post = Comment(text=data['text'], post_id=data['post_id'])
-        # comment.save()
-        print('Comment Created')
+        
+        print('Post Created')
 
     elif properties.content_type == 'post_updated':
-        # comment = Comment.objects.get(post_id=data['post_id'])
-        # comment.text = data['text']
-        # comment.save()
-        print('Comment Updated')
+        
+        print('Post Updated')
 
     elif properties.content_type == 'post_deleted':
-        # comment = Comment.objects.get(post_id=data['post_id'])
-        # comment.delete()
-        print('Comment Deleted')
+        
+        print('Post Deleted')
 
 
 channel.basic_consume(queue='main', on_message_callback=callback, auto_ack=True)

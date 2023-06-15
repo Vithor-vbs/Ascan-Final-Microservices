@@ -1,7 +1,13 @@
-.App{
+.container{
+    max-width: 100% !important;
     background-color: #212332;
     height: 100vh;
 }
+.full-height{
+    max-width: 100% !important;
+    background-color: #212332;
+}
+
 .darkest-color{
     background-color: #212230;
 }
@@ -26,10 +32,6 @@
 .header{
     color: #ffff;
     margin-bottom: 3rem;
-}
-
-.container{
-    max-width: 100% !important;
 }
 
 .dark-color{

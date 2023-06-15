@@ -8,8 +8,6 @@
     const [description, setDescription] = useState("");
     const [isVariableTrue, setIsVariableTrue] = useState(false);
 
-    
-
     useEffect(() => {
       (async () => {
         const response = await fetch("http://localhost:8000/api/posts");
@@ -48,12 +46,13 @@
     
       const existingPost = posts.find((post) => post.title === title);
       if (existingPost) {
-        // Email already exists, update the description of the existing post
+        
         if (isVariableTrue) {
           await deletePost(existingPost.id);
           return;
         }
-    
+        
+        // Email already exists, update the description of the existing post
         const updatedPost = { ...existingPost, description };
         const res = await fetch(
           `http://localhost:8000/api/posts/${existingPost.id}`,
@@ -176,6 +175,8 @@
     
       comment = "";
     };
+    
+    const heightStyle = posts.length > 3 ? {height: "100%"} : {};
 
     const handleAssignButtonClick = () => {
       setDescription("Subscription Purchased");
@@ -197,7 +198,7 @@
     };
     
     return (
-      <div className="App container">
+      <div className="App container" style={heightStyle}>
         <form className="row headers-box" onSubmit={createPost}>
           <div className="col-4">
             <h2 className="header">Cart Administrator</h2>
@@ -236,7 +237,8 @@
         </form>
 
         <main>
-          <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div className="row row-cols-1 row-cols-md-3 text-center">
+            
             {posts.length &&
               posts.map((post) => {
                 return (
